@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/menu_Grammar"
+        android:title="Grammar"/>
+    <item android:id="@+id/menu_Dictionary"
+        android:title="Dictionary"/>
+    <item android:id="@+id/menu_Vocabulary"
+        android:title="Vocabulary"/>
+    <item android:id="@+id/menu_Infomation"
+        android:title="Infomation"/>
     <item android:id="@+id/Exist"
         android:title="Exit"/>
 </menu>

@@ -14,4 +14,8 @@ public class Constants {
     public static final String FUTURE_CONTINUOUS_TENSE="Future continuous tense";
     public static final String FUTURE_PERFECT_TENSE="Future perfect tense";
     public static final String FUTURE_PERFECT_CONTINUOUS_TENSE="Future perfect continuous tense";
+    public static final String TRY = "Try";
+
+
+
 }

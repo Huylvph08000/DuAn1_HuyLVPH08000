@@ -11,11 +11,11 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.duan1_huylvph08000.vocabulary.SubjectsWordActivity;
 import com.example.duan1_huylvph08000.dictonary.DictonaryActivity;
 import com.example.duan1_huylvph08000.introduction.IntroductionActivity;
 import com.example.duan1_huylvph08000.R;
 import com.example.duan1_huylvph08000.grammar.StructActivity;
+import com.example.duan1_huylvph08000.vocabulary.Main2Activity;
 
 public class HomeActivity extends AppCompatActivity implements HomeMVP.View, View.OnClickListener{
 Intent intent;
@@ -69,7 +69,7 @@ HomeMVP.Presenter presenter;
 
     @Override
     public void goVocabulary() {
-        intent = new Intent(HomeActivity.this, SubjectsWordActivity.class);
+        intent = new Intent(HomeActivity.this, Main2Activity.class);
         startActivity(intent);
     }
 
@@ -118,8 +118,22 @@ HomeMVP.Presenter presenter;
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()) {
+            case R.id.menu_Grammar:
+                presenter.clickedGrammar();
+                break;
+            case R.id.menu_Dictionary:
+                presenter.clickedDictonary();
+                break;
+            case R.id.menu_Vocabulary:
+                presenter.clickedVocabulary();
+                break;
+            case R.id.menu_Infomation:
+                presenter.clickedIntroduction();
+                break;
             case R.id.Exist:
-presenter.clickedExist();
+            presenter.clickedExist();
+            default:
+
 
         }
         return super.onOptionsItemSelected(item);

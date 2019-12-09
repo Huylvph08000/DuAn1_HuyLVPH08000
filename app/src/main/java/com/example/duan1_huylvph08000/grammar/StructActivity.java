@@ -1,5 +1,6 @@
 package com.example.duan1_huylvph08000.grammar;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -7,9 +8,13 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 
 import com.example.duan1_huylvph08000.R;
+import com.example.duan1_huylvph08000.home.HomeActivity;
 
 import java.util.ArrayList;
 
@@ -22,7 +27,7 @@ public class StructActivity extends AppCompatActivity  {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_struct);
-        setTitle("Grammar");
+        setTitle("Tenses in English");
         mcontext = StructActivity.this;
         titleArrayList = new ArrayList<String>();
         titleArrayList.add(Constants.PRESENT_SIMPLE);
@@ -37,7 +42,9 @@ public class StructActivity extends AppCompatActivity  {
         titleArrayList.add(Constants.FUTURE_CONTINUOUS_TENSE);
         titleArrayList.add(Constants.FUTURE_PERFECT_TENSE);
         titleArrayList.add(Constants.FUTURE_PERFECT_CONTINUOUS_TENSE);
+        titleArrayList.add(Constants.TRY);
         mrecyclerView = findViewById(R.id.title_layout_recycleview);
+
         mrecyclerView.setHasFixedSize(true);
         mrecyclerView.setLayoutManager(new LinearLayoutManager(StructActivity.this));
 
@@ -52,6 +59,24 @@ public class StructActivity extends AppCompatActivity  {
         });
         mrecyclerView.setAdapter(adapter);
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater menuInflater = getMenuInflater();
+        menuInflater.inflate(R.menu.menu1, menu);
+        return true;
     }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        switch (item.getItemId()){
+            case R.id.backHome:
+                Intent intent=new Intent(StructActivity.this, HomeActivity.class);
+                startActivity(intent);
+                default:
+                    return super.onOptionsItemSelected(item);
+        }
+
+    }
+}
 
 
