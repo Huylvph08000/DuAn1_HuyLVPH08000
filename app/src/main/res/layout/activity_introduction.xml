@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_margin="8dp"
+    android:orientation="horizontal"
     android:layout_gravity="center_horizontal"
+    android:background="@drawable/background"
     tools:context=".introduction.IntroductionActivity">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="130dp"
+        android:src="@drawable/icon" />
 
     <TextView
-        android:textSize="25dp"
-        android:textColor="@color/colorPrimaryDark"
-        android:layout_gravity="center_horizontal"
-        android:id="@+id/txtCaption"
-        android:layout_width="match_parent"
+
+        android:textSize="30dp"
+        android:textColor="@color/lightgray"
+        android:layout_margin="320dp"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:text="TextView" />
-</LinearLayout>
+        android:text="Huy Le" />
+
+    <TextView
+
+        android:fontFamily="serif-monospace"
+        android:textSize="20sp"
+        android:textColor="@color/deeppurple"
+        android:padding="16dp"
+        android:paddingRight="25dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="380dp"
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Learn the basics of English with this FREE app. This app will help you learn English from the beginning in an easy step by step way. Once you complete this course, you will be able to speak and understand the English language at a basic level." />
+
+
+
+</RelativeLayout>

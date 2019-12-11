@@ -42,7 +42,7 @@ public class StructActivity extends AppCompatActivity  {
         titleArrayList.add(Constants.FUTURE_CONTINUOUS_TENSE);
         titleArrayList.add(Constants.FUTURE_PERFECT_TENSE);
         titleArrayList.add(Constants.FUTURE_PERFECT_CONTINUOUS_TENSE);
-        titleArrayList.add(Constants.TRY);
+        titleArrayList.add(Constants.WILL_FUTURE);
         mrecyclerView = findViewById(R.id.title_layout_recycleview);
 
         mrecyclerView.setHasFixedSize(true);
